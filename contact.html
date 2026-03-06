@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ（無料見積もり）| 笠木美装</title>
+  <meta name="description" content="笠木美装の無料見積もり依頼フォーム。個人・法人どちらのご相談にも対応。LINE・電話からのご連絡も可能です。">
+  <meta property="og:title" content="お問い合わせ（無料見積もり）| 笠木美装">
+  <meta property="og:description" content="無料見積もり依頼はこちら。LINE・電話でのご相談にも対応。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/contact.html">
+  <meta property="og:image" content="/assets/img/ogp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へスキップ</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="笠木美装 トップページへ">
+        笠木美装
+        <span class="logo-sub">KASAGI BISO</span>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="メニューを開閉" aria-controls="global-nav" aria-expanded="false">
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+      </button>
+      <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="services.html">サービス</a></li>
+          <li><a href="works.html">施工事例</a></li>
+          <li><a href="flow.html">施工の流れ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシー</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-primary" href="contact.html">無料見積もり</a>
+        <a class="btn btn-line" href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener">LINE相談</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">トップ</a> / お問い合わせ</div>
+        <h1>無料見積もり依頼・お問い合わせ</h1>
+        <p>最短で現地確認の日程をご案内します。まずはご要望をお聞かせください。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="form-card reveal">
+          <h2 class="section-title" style="font-size:1.3rem;">お問い合わせフォーム</h2>
+          <p class="section-lead">必須項目をご入力のうえ送信してください。</p>
+
+          <!-- TODO: FormspreeのURLを差し替え -->
+          <form action="https://formspree.io/f/YOUR_ID" method="POST">
+            <!-- TODO: 送信後リダイレクト先を実URLへ差し替え -->
+            <input type="hidden" name="_next" value="https://example.com/contact.html?submitted=1#thanks">
+            <input type="hidden" name="_subject" value="笠木美装サイトからお問い合わせ">
+
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">必須</span></label>
+              <input id="name" name="name" type="text" required autocomplete="name" placeholder="例：山田 太郎">
+            </div>
+
+            <div class="form-group">
+              <label for="company">会社名 <span class="form-note">任意</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="例：株式会社サンプル">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">メールアドレス <span class="required">必須</span></label>
+                <input id="email" name="email" type="email" required autocomplete="email" placeholder="example@domain.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">電話番号 <span class="form-note">任意</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="例：090-1234-5678">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="customerType">お客様区分 <span class="required">必須</span></label>
+                <select id="customerType" name="customer_type" required>
+                  <option value="" selected disabled>選択してください</option>
+                  <option value="個人">個人</option>
+                  <option value="法人">法人</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inquiryType">ご相談種別 <span class="required">必須</span></label>
+                <select id="inquiryType" name="inquiry_type" required>
+                  <option value="" selected disabled>選択してください</option>
+                  <option value="見積もり">見積もり</option>
+                  <option value="業務委託">業務委託</option>
+                  <option value="その他">その他</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">ご相談内容 <span class="required">必須</span></label>
+              <textarea id="message" name="message" required placeholder="建物種別、気になる症状、希望時期などをご記入ください。"></textarea>
+            </div>
+
+            <div class="form-group privacy-check">
+              <input id="privacyAgreement" name="privacy_agreement" type="checkbox" required>
+              <label for="privacyAgreement"><a href="privacy.html">プライバシーポリシー</a>に同意する <span class="required">必須</span></label>
+            </div>
+
+            <div class="submit-row">
+              <button class="btn btn-primary" type="submit">内容を送信する</button>
+              <span class="form-note">送信後、内容確認のため返信連絡を差し上げます。</span>
+            </div>
+          </form>
+
+          <div id="form-success" class="form-success" role="status" hidden>
+            送信ありがとうございました。内容を確認のうえ、担当者よりご連絡いたします。
+          </div>
+        </div>
+
+        <aside class="contact-side reveal" aria-label="別導線">
+          <h2 class="section-title" style="font-size:1.2rem;">お急ぎの方はこちら</h2>
+          <p>フォーム入力前でも、LINEや電話でご相談いただけます。</p>
+          <p style="margin-top:1rem;"><a class="btn btn-line" href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener">LINEで相談する</a></p>
+          <p style="margin-top:0.6rem;"><a class="btn btn-tel" href="tel:042-498-4101">電話する（042-498-4101）</a></p>
+
+          <hr style="margin:1rem 0;border:0;border-top:1px solid #d8e0ea;">
+
+          <h3 style="margin-bottom:0.5rem;">ご相談時にあるとスムーズな情報</h3>
+          <ul class="list-check">
+            <li>建物種別（戸建て・店舗・アパートなど）</li>
+            <li>気になる箇所（外壁、屋根、防水、内装など）</li>
+            <li>希望時期（いつ頃までに施工したいか）</li>
+          </ul>
+
+          <p style="margin-top:1rem;" class="form-note">※ 送信後に表示されるサンクスメッセージは、`?submitted=1` または `#thanks` で表示されます。</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-title">笠木美装</h2>
+          <p>現場品質で選ばれる、地域密着の塗装会社。</p>
+          <p>代表者：笠木慎二郎<br>電話番号：<a href="tel:042-498-4101">042-498-4101</a></p>
+          <p>所在地：東京都（詳細はお問い合わせ）</p>
+        </div>
+        <div>
+          <h2 class="footer-title">サイトメニュー</h2>
+          <div class="footer-links">
+            <a href="services.html">サービス</a>
+            <a href="works.html">施工事例</a>
+            <a href="flow.html">施工の流れ</a>
+            <a href="faq.html">FAQ</a>
+            <a href="company.html">会社概要</a>
+            <a href="contact.html">お問い合わせ</a>
+          </div>
+        </div>
+        <div>
+          <h2 class="footer-title">お問い合わせ</h2>
+          <div class="footer-links">
+            <a href="contact.html">無料見積もりフォーム</a>
+            <a href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener">LINEで相談</a>
+            <a href="tel:042-498-4101">電話する</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 笠木美装 All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <div class="floating-cta" aria-label="固定お問い合わせ導線">
+    <a class="btn btn-primary" href="contact.html">無料見積もり</a>
+    <a class="btn btn-line" href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener">LINEで相談</a>
+    <a class="btn btn-tel" href="tel:042-498-4101">電話する</a>
+  </div>
+
+  <div class="mobile-cta-bar" aria-label="モバイル固定お問い合わせ導線">
+    <a class="m-quote" href="contact.html">無料見積もり</a>
+    <a class="m-line" href="https://line.me/R/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener">LINE相談</a>
+    <a class="m-tel" href="tel:042-498-4101">電話</a>
+  </div>
+</body>
+</html>
